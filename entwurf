@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TransPerform – Pitch Book</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#1b1c1c",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-tertiary-fixed-variant": "#004788",
+                        "primary-fixed": "#ffdad5",
+                        "on-primary-fixed-variant": "#930007",
+                        "on-primary-fixed": "#410001",
+                        "swiss-red": "#E30613",
+                        "surface-tint": "#c0000c",
+                        "secondary": "#5f5e5e",
+                        "surface-bright": "#fbf9f9",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e3e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#0071d4",
+                        "on-primary-container": "#fff5f3",
+                        "surface": "#fbf9f9",
+                        "pure-white": "#FFFFFF",
+                        "on-background": "#1b1c1c",
+                        "surface-container-low": "#f5f3f3",
+                        "primary": "#b5000b",
+                        "outline-variant": "#e9bcb6",
+                        "secondary-fixed": "#e4e2e2",
+                        "inverse-surface": "#303031",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "charcoal-dark": "#444444",
+                        "primary-container": "#e30613",
+                        "surface-light": "#F7F7F7",
+                        "outline": "#936e69",
+                        "on-secondary-container": "#656464",
+                        "tertiary": "#0059a8",
+                        "tertiary-fixed-dim": "#a7c8ff",
+                        "on-tertiary-container": "#f5f7ff",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e3e2e2",
+                        "background": "#fbf9f9",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "on-tertiary-fixed": "#001b3c",
+                        "tertiary-fixed": "#d5e3ff",
+                        "secondary-container": "#e4e2e2",
+                        "surface-dim": "#dbdad9",
+                        "surface-container-high": "#e9e8e7",
+                        "surface-container": "#efeded",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#5e3f3b",
+                        "on-surface": "#1b1c1c",
+                        "on-secondary-fixed-variant": "#474747",
+                        "charcoal-medium": "#777777",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "inverse-primary": "#ffb4aa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .swiss-border-left {
+            border-left: 4px solid #E30613;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(209, 209, 209, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-pure-white text-on-surface font-body-md selection:bg-swiss-red selection:text-white">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 z-50 bg-pure-white/95 backdrop-blur-md docked full-width top-0 sticky border-b border-outline-variant dark:border-outline">
+<div class="text-headline-sm font-headline-sm font-bold text-swiss-red dark:text-swiss-red uppercase tracking-tighter">TransPerform</div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-label-md font-label-md text-charcoal-dark hover:text-swiss-red transition-colors" href="#wer-wir-sind">Wer wir sind</a>
+<a class="text-label-md font-label-md text-charcoal-dark hover:text-swiss-red transition-colors" href="#wie-wir-arbeiten">Wie wir arbeiten</a>
+<a class="text-label-md font-label-md text-charcoal-dark hover:text-swiss-red transition-colors" href="#womit-wir-helfen">Womit wir helfen</a>
+<a class="text-label-md font-label-md text-charcoal-dark hover:text-swiss-red transition-colors" href="#fallbeispiele">Fallbeispiele</a>
+<a class="text-label-md font-label-md text-charcoal-dark hover:text-swiss-red transition-colors" href="#einstieg">Einstieg</a>
+</nav>
+<button class="bg-swiss-red text-pure-white px-6 py-2 text-label-md font-label-md hover:opacity-80 transition-opacity">Get Started</button>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale brightness-50" data-alt="A wide-angle interior shot of a contemporary, high-end Swiss office space with glass walls and minimalist furniture. The atmosphere is professional and serene, lit by soft natural daylight. The image has a clean aesthetic with neutral tones, featuring subtle accents of vibrant red from architectural details. It conveys a sense of high-level business transformation and corporate precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC3nnvavYmOWf8b97a7roWGGcx_N7UtNRAaYMhko4LDzjQAaZDRWIWi44xpCDNBNqzdCGmNWLcBsf4A3jJN9OnGYg_hMK46k7LsHaEw9jiwQ-mnZS7VIhlMno1hkSz19Ph5BHWvS-5xYZ8_0rRtTWaxgZS-FADSS2Q3MXTbtVp1t8xyqGJenXskFEPep-spajjV2JjVB19s_IegUUsPfLWqtDG72_7LDbr1pUzV1gX_LWtN0DqcKgox9ZcVtS3sO9edJW7d5gyjpU"/>
+</div>
+<div class="relative z-10 w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-3xl">
+<span class="inline-block bg-swiss-red text-white px-3 py-1 text-label-md mb-6 uppercase tracking-widest">Digital Pitch Book v1.0</span>
+<h1 class="font-display-lg text-display-lg text-pure-white mb-6 md:text-display-lg text-headline-lg-mobile leading-tight">TransPerform – Pitch Book</h1>
+<p class="font-body-lg text-body-lg text-pure-white/90 mb-10 max-w-xl">Rohfassung zur Bearbeitung an der Retraite. Performance-Steigerung durch echte Transformation.</p>
+<div class="flex gap-4">
+<a class="bg-swiss-red text-white px-8 py-4 text-label-md font-bold hover:bg-primary transition-all" href="#wie-wir-arbeiten">Ansatz entdecken</a>
+<a class="border border-pure-white text-pure-white px-8 py-4 text-label-md font-bold hover:bg-pure-white/10 transition-all" href="#wer-wir-sind">Wer wir sind</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Chapter 1: Wer wir sind -->
+<section class="py-section-gap bg-surface-light" id="wer-wir-sind">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid md:grid-cols-2 gap-gutter items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-charcoal-dark mb-8 md:text-headline-lg text-headline-lg-mobile">Wer wir sind</h2>
+<div class="swiss-border-left pl-8 space-y-6">
+<p class="font-body-lg text-body-lg text-charcoal-dark leading-relaxed">
+                                TransPerform steht für genau das: <span class="text-swiss-red font-bold">Transformation, die Performance steigert.</span> Wir begleiten Unternehmen nicht nur auf dem Papier, sondern bis in das Herz ihrer Kultur und das Verhalten ihrer Menschen.
+                            </p>
+<p class="font-body-md text-body-md text-charcoal-medium">
+                                Unsere Expertise verbindet strategische Weitsicht mit operativer Exzellenz. Wir sind Sparringspartner für Führungskräfte, die den Status Quo nicht nur verwalten, sondern aktiv neugestalten wollen.
+                            </p>
+</div>
+</div>
+<div class="relative h-[500px]">
+<img class="w-full h-full object-cover rounded-lg shadow-xl" data-alt="A focused group of professionals engaged in a high-stakes strategy session around a minimalist white table. The lighting is bright and clear, emphasizing a modern light-mode office setting. The participants are diverse and show expressions of deep engagement and collaboration. The visual style is crisp and clean, reflecting a professional Swiss consulting environment with subtle red accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfhvZ7gmaV5TyR-DECPClfCaPGTVgWnz_PJCHBR4isnK8FHt26Z_mgLmlnCoR9zs5p07WngS7h1vE1KsAfB9Ejdkbac8pZQqCBMD_7TKyGYiqnYg6GhAnSZOmaKD9nOMAiNVj5kZrsstPGiYDRaoD6TmsNAqpjSzhFuMnRodfcc5DonQtNEuYint7DuWJvY9T8fY3B8FWXT-zM0LDEisVxN3ezQRztGLTt_B-sTNzVbiaJFXRgULVVuwFVw7V2zjN-gOhKuEDsGW8"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Chapter 2: Wie wir arbeiten -->
+<section class="py-section-gap bg-pure-white overflow-hidden" id="wie-wir-arbeiten">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-20 text-center max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-dark mb-4">Wie wir arbeiten</h2>
+<p class="font-body-md text-body-md text-charcoal-medium uppercase tracking-widest">Unsere Haltung &amp; Unser Ansatz</p>
+</div>
+<div class="grid md:grid-cols-2 gap-16 mb-section-gap">
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-swiss-red text-4xl">diversity_3</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-dark mb-2">Boutique-Beratung</h3>
+<p class="text-charcoal-medium">Keine Massenware. Wir bieten massgeschneiderte Lösungen für komplexe Herausforderungen. Persönlich, nah und hochgradig spezialisiert.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-swiss-red text-4xl">psychology</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-charcoal-dark mb-2">Menschen machen den Unterschied</h3>
+<p class="text-charcoal-medium">Systeme verändern sich nur, wenn Menschen ihr Verhalten ändern. Wir fokussieren uns auf die psychologische Komponente der Transformation.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-light p-10 rounded-xl relative">
+<h3 class="font-label-md text-label-md text-swiss-red mb-10 uppercase">Der Flow der Transformation</h3>
+<div class="flex flex-col gap-6 relative">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-swiss-red text-white flex items-center justify-center font-bold">1</div>
+<div class="text-headline-sm font-headline-sm">Idee</div>
+</div>
+<div class="w-px h-6 bg-outline-variant ml-6"></div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full border-2 border-swiss-red text-swiss-red flex items-center justify-center font-bold">2</div>
+<div class="text-headline-sm font-headline-sm">Papier</div>
+</div>
+<div class="w-px h-6 bg-outline-variant ml-6"></div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full border-2 border-swiss-red text-swiss-red flex items-center justify-center font-bold">3</div>
+<div class="text-headline-sm font-headline-sm">Herz</div>
+</div>
+<div class="w-px h-6 bg-outline-variant ml-6"></div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-charcoal-dark text-white flex items-center justify-center font-bold">4</div>
+<div class="text-headline-sm font-headline-sm">Verhalten</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Was uns unterscheidet: Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-section-gap">
+<div class="md:col-span-2 bg-charcoal-dark text-pure-white p-8 flex flex-col justify-between min-h-[240px]">
+<h3 class="font-headline-md text-headline-md mb-4">Was uns unterscheidet</h3>
+<p class="text-body-md opacity-80">Vier Säulen, die unsere DNA als Partner für Ihren Erfolg definieren.</p>
+</div>
+<div class="bg-surface-light p-8 border border-outline-variant hover:border-swiss-red transition-colors group">
+<span class="material-symbols-outlined text-swiss-red mb-4 group-hover:scale-110 transition-transform">groups</span>
+<h4 class="font-headline-sm text-headline-sm mb-2">Kleine Teams</h4>
+<p class="text-label-md text-charcoal-medium">Maximale Agilität und direkter Draht zu den Entscheidern.</p>
+</div>
+<div class="bg-surface-light p-8 border border-outline-variant hover:border-swiss-red transition-colors group">
+<span class="material-symbols-outlined text-swiss-red mb-4 group-hover:scale-110 transition-transform">person_check</span>
+<h4 class="font-headline-sm text-headline-sm mb-2">Dieselben Personen</h4>
+<p class="text-label-md text-charcoal-medium">Wer pitcht, der arbeitet auch im Projekt. Keine Köder-Strategie.</p>
+</div>
+<div class="bg-surface-light p-8 border border-outline-variant hover:border-swiss-red transition-colors group">
+<span class="material-symbols-outlined text-swiss-red mb-4 group-hover:scale-110 transition-transform">account_tree</span>
+<h4 class="font-headline-sm text-headline-sm mb-2">Keine Hierarchie</h4>
+<p class="text-label-md text-charcoal-medium">Flache Strukturen für ehrliche Kommunikation auf Augenhöhe.</p>
+</div>
+<div class="bg-surface-light p-8 border border-outline-variant hover:border-swiss-red transition-colors group">
+<span class="material-symbols-outlined text-swiss-red mb-4 group-hover:scale-110 transition-transform">trending_up</span>
+<h4 class="font-headline-sm text-headline-sm mb-2">Hohe Lernkurve</h4>
+<p class="text-label-md text-charcoal-medium">Wissenstransfer steht im Fokus – wir machen uns entbehrlich.</p>
+</div>
+<div class="md:col-span-2 bg-swiss-red text-pure-white p-12 flex items-center justify-center text-center italic">
+<blockquote class="text-headline-sm font-headline-sm max-w-md">
+                            "Ehrlich. Direkt. Wertschätzend. Wir sagen, was wir denken – und wir tun, was wir sagen."
+                            <footer class="mt-4 not-italic font-label-md uppercase tracking-widest opacity-80">— Unser Credo</footer>
+</blockquote>
+</div>
+</div>
+</div>
+</section>
+<!-- Chapter 2b: Schweizweit -->
+<section class="py-section-gap bg-surface-dim">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-dark mb-4">Schweizweit. Sprachübergreifend. Konsistent.</h2>
+<p class="font-headline-sm text-headline-sm text-swiss-red mb-16">Eine Intervention. Ein Ergebnis. Vier Sprachen.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mb-16">
+<div class="bg-pure-white p-8 rounded-lg shadow-sm">
+<div class="text-headline-md mb-2">DE</div>
+<div class="text-label-md text-charcoal-medium">Deutsch</div>
+</div>
+<div class="bg-pure-white p-8 rounded-lg shadow-sm">
+<div class="text-headline-md mb-2">FR</div>
+<div class="text-label-md text-charcoal-medium">Français</div>
+</div>
+<div class="bg-pure-white p-8 rounded-lg shadow-sm">
+<div class="text-headline-md mb-2">IT</div>
+<div class="text-label-md text-charcoal-medium">Italiano</div>
+</div>
+<div class="bg-pure-white p-8 rounded-lg shadow-sm">
+<div class="text-headline-md mb-2">EN</div>
+<div class="text-label-md text-charcoal-medium">English</div>
+</div>
+</div>
+<div class="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-[400px] object-cover grayscale" data-alt="A stylized, high-contrast monochrome map of Switzerland featuring subtle topographical details. The image is clean and modern, evoking a sense of precision and nationwide reach. In the light-mode setting, the map is punctuated by small, vibrant red location pins representing hubs across the linguistic regions. The overall vibe is professional, authoritative, and quintessentially Swiss." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnVeEzImEtK58LRqS8fVTQqD2WDbuIYnDdYTqpOwtTu6NZvk99MgfYNukRJD9gz6m8_vMi12jGwJ1FcOPS-xgoO7gi0p_CnD9RlRT8ulEaAnrfqEH0NP3svRsugBf8sGBSz5gaZfZ8rzdZP95Cz0i26asYvAE4IviPr8JOCLUjkkjZInB2F4PQrf3RFPMkrcL5Inw3mpLvcJM8u_je4fwGneE-SJEPohMMcKU3h2uhFFIUJhOsbXuzzlQSArWado7r-VNJCzUI-Y8"/>
+</div>
+</div>
+</section>
+<!-- Chapter 3: Womit wir helfen -->
+<section class="py-section-gap bg-pure-white" id="womit-wir-helfen">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-20">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-dark mb-4">Womit wir helfen</h2>
+<div class="h-1 w-20 bg-swiss-red"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Service 1 -->
+<div class="p-10 border border-outline-variant bg-surface-light group hover:bg-swiss-red transition-all duration-300">
+<div class="text-label-md text-swiss-red group-hover:text-pure-white mb-6 font-bold">01</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-pure-white">Verkauf &amp; Beratungsansatz</h3>
+<p class="text-charcoal-medium group-hover:text-pure-white/80">Ambitionierte Verkaufsziele brauchen ein solides Fundament. Wir helfen, Prozesse zu definieren, Erwartungen zu klären und Verkaufsteams sowie Führungskräfte gezielt zu befähigen – von der Strategie bis zur Umsetzung im Alltag.</p>
+</div>
+<!-- Service 2 -->
+<div class="p-10 border border-outline-variant bg-surface-light group hover:bg-swiss-red transition-all duration-300">
+<div class="text-label-md text-swiss-red group-hover:text-pure-white mb-6 font-bold">02</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-pure-white">Verhaltenstransformation mit KI</h3>
+<p class="text-charcoal-medium group-hover:text-pure-white/80">Kulturwandel gelingt nur, wenn Verhalten sich wirklich verändert. Wir begleiten Transformationen mit einer klaren Map, Echtzeit-Feedback und gezielten Interventionen – über alle Stufen, Rollen und Funktionen hinweg.</p>
+</div>
+<!-- Service 3 -->
+<div class="p-10 border border-outline-variant bg-surface-light group hover:bg-swiss-red transition-all duration-300">
+<div class="text-label-md text-swiss-red group-hover:text-pure-white mb-6 font-bold">03</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-pure-white">Strategie-Support</h3>
+<p class="text-charcoal-medium group-hover:text-pure-white/80">Eine gute Strategie ist mehr als ein Dokument. Wir unterstützen bei der Erarbeitung oder Überprüfung der Strategie – und sorgen dafür, dass sie auf allen Ebenen des Unternehmens verankert und gelebt wird.</p>
+</div>
+<!-- Service 4 -->
+<div class="p-10 border border-outline-variant bg-surface-light group hover:bg-swiss-red transition-all duration-300">
+<div class="text-label-md text-swiss-red group-hover:text-pure-white mb-6 font-bold">04</div>
+<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-pure-white">Führungskräfte entwickeln</h3>
+<p class="text-charcoal-medium group-hover:text-pure-white/80">Führung wirkt dann, wenn sie klar definiert und im Alltag umsetzbar ist. Wir befähigen Führungskräfte und ihre Teams – mit dem Ergebnis: weniger Fluktuation, bessere Zusammenarbeit, stärkere Zielerreichung.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Chapter 4: Fallbeispiele -->
+<section class="py-section-gap bg-surface-light" id="fallbeispiele">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-dark mb-16">Fallbeispiele</h2>
+<div class="space-y-12">
+<!-- Case 1 -->
+<div class="bg-pure-white grid md:grid-cols-3 overflow-hidden border border-outline-variant">
+<div class="p-12 md:col-span-2">
+<span class="text-swiss-red font-bold text-label-md mb-4 block uppercase">Regionalbank</span>
+<h3 class="font-headline-md text-headline-md mb-6">Führende Regionalbank</h3>
+<div class="space-y-6 mb-8 text-charcoal-medium">
+<div>
+<h4 class="text-xs font-bold uppercase text-charcoal-dark mb-1">Ausgangslage</h4>
+<p class="text-body-md">Die Bank plant eine schweizweite Expansion und möchte die Qualität des Beratungsgesprächs standardisieren, um ein einheitliches Kundenerlebnis über alle Filialen hinweg sicherzustellen.</p>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase text-charcoal-dark mb-1">Erste Beratung</h4>
+<p class="text-body-md">Gemeinsame Analyse der Ist-Situation: Wo liegen die Unterschiede in der Beratungsqualität? Welche Tools werden bereits genutzt? Definition des "Target Operating Model" für den Verkauf.</p>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase text-charcoal-dark mb-1">Lösungsansatz &amp; Umsetzung</h4>
+<p class="text-body-md">Rollout eines neuen, modularen Beratungsansatzes. Schulung der Regionalleiter als Multiplikatoren und direkte Begleitung der Kundenberater am Arbeitsplatz (Coaching on the Job).</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4 mb-8">
+<div><div class="font-bold">~28 Mrd.</div><div class="text-xs text-charcoal-medium">Bilanzsumme</div></div>
+<div><div class="font-bold">1.000+</div><div class="text-xs text-charcoal-medium">Mitarbeiter</div></div>
+<div><div class="font-bold">93</div><div class="text-xs text-charcoal-medium">Filialen</div></div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-dim px-3 py-1 text-xs font-bold">#Expansion</span>
+<span class="bg-surface-dim px-3 py-1 text-xs font-bold">#SchweizerweiterRollout</span>
+<span class="bg-surface-dim px-3 py-1 text-xs font-bold">#StandardisierungKundenerlebnis</span>
+</div>
+</div>
+<div class="relative min-h-[300px]">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a sleek glass facade of a modern Swiss bank building." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFfCYtP2dBj6PXyCK_FqoXC4n76KvxHGBR740FSvX_xH8T0j-AzwmxzZ3mi0WnI40JFqk7odPjEPiQ_UVTXmXNPtDoz_VbdpRYZCzXWFe9zLjT0ckJtuMZJZbwPCVPNHgzKQBHH4MjoNsndLdJBp0--cxU_1t8JXU_4JrthdSt6-0diNm5nDEEGTAxE-_TMYnWyoYiTf4gpxjYCDwLJzZ6CXZSS29UGxYZZy0p_htzMsetCj-Olkk-Q_Jmmu7RXuOFXUwIBvQBOkk"/>
+</div>
+</div>
+<!-- Case 2 -->
+<div class="bg-pure-white grid md:grid-cols-3 overflow-hidden border border-outline-variant">
+<div class="relative min-h-[300px] order-last md:order-first">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist desk surface representing strategy in the insurance sector." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmwEcJ94T3yoUv9fvXoo4eGM3hih6NjgAFXPanLp8MDrX-s38n0_tQ2s7m_rIrpt5o-96Emq9RCrV0SaMtuTcmsU5RodmQ9ncp3eUEihveOt0Bc7TeHY_8SxeKvrC7eHvQVqSKBDqZKucni2j2p56_L4_DonQqMdPPjlyJlLLnknGzSkQukoMqoW5ivV8atSUzBDi74BkdqSFG9jwdw2kEp2zWzi9v3VUukkbeo16OUIFNJQ48bxKPet38pBzP2QA-nuUBtaG58SI"/>
+</div>
+<div class="p-12 md:col-span-2">
+<span class="text-swiss-red font-bold text-label-md mb-4 block uppercase">Versicherung</span>
+<h3 class="font-headline-md text-headline-md mb-6">Nationale Versicherungsgesellschaft</h3>
+<div class="space-y-6 mb-8 text-charcoal-medium">
+<div>
+<h4 class="text-xs font-bold uppercase text-charcoal-dark mb-1">Ausgangslage</h4>
+<p class="text-body-md">Ein neues Vertriebsmodell soll dezentral implementiert werden. Ziel ist die Steigerung der Cross-Selling Quote durch einen ganzheitlichen Beratungsansatz ("360 Grad").</p>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase text-charcoal-dark mb-1">Erste Beratung</h4>
+<p class="text-body-md">Workshops mit der Verkaufsleitung zur Schärfung der Sales-Story. Identifikation von Pilot-Agenturen für den ersten Praxistest.</p>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase text-charcoal-dark mb-1">Lösungsansatz &amp; Umsetzung</h4>
+<p class="text-body-md">Interaktive Trainingsmodule für die Agenturleiter. Einsatz einer KI-gestützten App zur Simulation von Verkaufsgesprächen und direktem Feedback.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-dim px-3 py-1 text-xs font-bold">#360°Beratungsansatz</span>
+<span class="bg-surface-dim px-3 py-1 text-xs font-bold">#DezentralerRollout</span>
+<span class="bg-surface-dim px-3 py-1 text-xs font-bold">#CrossUndUpselling</span>
+</div>
+</div>
+</div>
+<!-- Case 3 -->
+<div class="bg-pure-white grid md:grid-cols-3 overflow-hidden border border-outline-variant">
+<div class="p-12 md:col-span-2">
+<span class="text-swiss-red font-bold text-label-md mb-4 block uppercase">Krankenkasse</span>
+<h3 class="font-headline-md text-headline-md mb-6">Spezialisierte Krankenversicherung</h3>
+<div class="space-y-6 mb-8 text-charcoal-medium">
+<div>
+<h4 class="text-xs font-bold uppercase text-charcoal-dark mb-1">Ausgangslage</h4>
+<p class="text-body-md">Der Innendienst soll stärker in den aktiven Vertrieb eingebunden werden. Es fehlt an Sicherheit im Umgang mit Kundenwänden und an einem einheitlichen Auftritt.</p>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase text-charcoal-dark mb-1">Erste Beratung</h4>
+<p class="text-body-md">Hospitationen bei Telefongesprächen. Erstellung eines spezifischen "Argumentations-Leitfadens", der auf die Bedürfnisse des Innendienstes zugeschnitten ist.</p>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase text-charcoal-dark mb-1">Lösungsansatz &amp; Umsetzung</h4>
+<p class="text-body-md">Aufbau einer "Sales Academy". Begleitung über 12 Monate mit monatlichen Impuls-Workshops und individuellen Feedbacks zur nachhaltigen Verhaltensänderung.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-dim px-3 py-1 text-xs font-bold">#SalesAcademy</span>
+<span class="bg-surface-dim px-3 py-1 text-xs font-bold">#NachhaltigeBefähigung</span>
+<span class="bg-surface-dim px-3 py-1 text-xs font-bold">#EinheitlicherVertriebsauftritt</span>
+</div>
+</div>
+<div class="relative min-h-[300px]">
+<img class="w-full h-full object-cover" data-alt="A soft-focus healthcare setting signifying healthcare consultation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSPxyHiSF7LITBPgTf3zGTAwNtgXOAOVs97wP6We-s2ccCVzXBwN9OgRPA_tEiWTOQtA4Xk2DxbLwIfY0HJSLB4kn04klGGmLA839qOfqWQTwDei4zA2LpsRRDlLap4ym3yq0aFp9hl61nRp3n94qPmgWGxFcK6iEuycagYHKHmIUbmLV-Es5jXa_uoXJKyTv-HpwU47cOi5F4K47pdeti3whsLc96TT4kOMwUIcX2PhklfCL1hFDbVg4axVHBHCf7zR2KsowQTd0"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Chapter 5: Wie ein Einstieg aussehen kann -->
+<section class="py-section-gap bg-charcoal-dark text-pure-white" id="einstieg">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid md:grid-cols-2 gap-20">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Wie ein Einstieg aussehen kann</h2>
+<div class="mb-10 space-y-4 text-body-lg opacity-90">
+<p>Jede Zusammenarbeit beginnt anders – weil jede Herausforderung individuell ist. Manchmal ist es ein konkretes Problem, manchmal eine vage Ahnung, dass "mehr gehen müsste".</p>
+<p>Was danach immer gleich ist: Wir arbeiten uns tief in Ihre Realität ein. Wir hören zu, beobachten und stellen die richtigen Fragen, bevor wir Lösungen präsentieren.</p>
+</div>
+<div class="space-y-12">
+<div class="relative pl-12">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full border border-pure-white flex items-center justify-center text-xs">01</div>
+<h4 class="font-headline-sm mb-2">Discovery Call</h4>
+<p class="opacity-70">30-minütiger Austausch zur Klärung der Ausgangslage und Zielsetzung.</p>
+</div>
+<div class="relative pl-12">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full border border-pure-white flex items-center justify-center text-xs">02</div>
+<h4 class="font-headline-sm mb-2">Deep Dive Workshop</h4>
+<p class="opacity-70">Halbtägiger Termin vor Ort zur Identifikation der Hebelpunkte.</p>
+</div>
+<div class="relative pl-12">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full border border-pure-white flex items-center justify-center text-xs">03</div>
+<h4 class="font-headline-sm mb-2">Maßnahmenplan</h4>
+<p class="opacity-70">Konkrete Roadmap für die Transformation mit klaren KPIs.</p>
+</div>
+</div>
+</div>
+<div class="bg-pure-white p-12 text-on-surface">
+<h3 class="font-headline-sm mb-6">Bereit für das erste Gespräch?</h3>
+<p class="mb-10 text-charcoal-medium">Lassen Sie uns gemeinsam herausfinden, wie wir Ihre Performance steigern können.</p>
+<div class="flex items-center gap-6 mb-12">
+<div class="w-16 h-16 bg-surface-dim rounded-full overflow-hidden">
+<img data-alt="A professional headshot of Beat Kropf." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcoQxcW8zaZi9djvvKHO154_5yfLkl7EhOcgGOj4CVC7QRNgPoBicAwbUxV6wsbtGE-nMM0SP_P9z7j3DOSWlr2jVgknRrithiCMG2NcM11ONw4vOmLAMqJCsES9ChJ49Bxslh5Zzv9cCJHrYFu8iq1DmgoeL_iBOfFJnDZqQEYqQY8oQnlItPrexrC0wJxNYob9vL5IURqO4N4_Rr9OGdFTI5pTWAG-b8kaHe5EelZCQ5g_iNVLqoAQZqm1mgHUn2AKgNLfpQ_pU"/>
+</div>
+<div>
+<div class="font-bold text-headline-sm">Beat Kropf</div>
+<div class="text-swiss-red font-label-md uppercase">Managing Partner</div>
+</div>
+</div>
+<form class="space-y-6" onsubmit="event.preventDefault(); alert('Vielen Dank für Ihr Interesse. Wir melden uns umgehend.');">
+<div>
+<label class="text-xs uppercase font-bold tracking-wider mb-2 block">Name</label>
+<input class="w-full border-b border-outline-variant focus:border-swiss-red outline-none py-2 transition-all" placeholder="Ihr Name" type="text"/>
+</div>
+<div>
+<label class="text-xs uppercase font-bold tracking-wider mb-2 block">E-Mail</label>
+<input class="w-full border-b border-outline-variant focus:border-swiss-red outline-none py-2 transition-all" placeholder="ihre@email.ch" type="email"/>
+</div>
+<button class="w-full bg-swiss-red text-white py-4 font-bold uppercase tracking-widest hover:bg-primary transition-all" type="submit">Anfrage senden</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Chapter 6: Retraite Placeholder -->
+<section class="py-section-gap bg-surface-light border-b border-outline-variant">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg text-charcoal-dark mb-6 opacity-30">Wer wir sind als Menschen</h2>
+<div class="p-20 border-2 border-dashed border-outline-variant rounded-xl">
+<span class="material-symbols-outlined text-6xl text-charcoal-medium mb-4">construction</span>
+<p class="font-body-lg text-charcoal-medium">Dieses Kapitel wird an der Retraite erarbeitet.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit-8 gap-gutter bg-surface-container-lowest border-t border-outline-variant">
+<div class="text-headline-sm font-headline-sm font-bold text-charcoal-dark">TransPerform</div>
+<div class="text-body-md font-body-md text-charcoal-medium">© 2024 TransPerform Consulting. All rights reserved.</div>
+<div class="flex gap-6">
+<a class="text-label-md font-label-md text-charcoal-medium hover:text-swiss-red underline underline-offset-4 transition-all" href="#">Privacy Policy</a>
+<a class="text-label-md font-label-md text-charcoal-medium hover:text-swiss-red underline underline-offset-4 transition-all" href="#">LinkedIn</a>
+<a class="text-label-md font-label-md text-charcoal-medium hover:text-swiss-red underline underline-offset-4 transition-all" href="#">Contact</a>
+</div>
+</footer>
+<script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for simple scroll revealing
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'ease-out');
+        });
+    </script>
+</body></html>
